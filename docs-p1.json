@@ -1,0 +1,153 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "tasks-management",
+  "dateExported": "2022-03-25T03:28:22.717Z",
+  "version": "1.1",
+  "folders": [
+    {
+      "containerId": "",
+      "sortNum": 10000,
+      "name": "tasks",
+      "_id": "11dc210d-f87e-4cb2-b726-015125f5c0ce",
+      "created": "2022-03-25T03:10:17.578Z"
+    }
+  ],
+  "requests": [
+    {
+      "containerId": "11dc210d-f87e-4cb2-b726-015125f5c0ce",
+      "sortNum": 10000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.com)"
+        }
+      ],
+      "colId": "4226891e-9e0b-4a2e-bb50-c906b54d0b8b",
+      "name": "Get all tasks",
+      "url": "{{URL}}/api/v1/tasks",
+      "method": "GET",
+      "modified": "2022-03-25T03:26:02.566Z",
+      "created": "2022-03-25T03:10:33.890Z",
+      "_id": "90c69eaf-6d6e-454c-95d7-f17731dd9f88",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "11dc210d-f87e-4cb2-b726-015125f5c0ce",
+      "sortNum": 20000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.com)"
+        }
+      ],
+      "colId": "4226891e-9e0b-4a2e-bb50-c906b54d0b8b",
+      "name": "Create Task",
+      "url": "{{URL}}/api/v1/tasks",
+      "method": "POST",
+      "modified": "2022-03-25T03:26:23.104Z",
+      "created": "2022-03-25T03:17:00.370Z",
+      "_id": "c6b1899f-07d7-4bce-bad2-047235bd7d6c",
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"title\": \"task 3\",\n    \"description\": \"desc task 3\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "containerId": "11dc210d-f87e-4cb2-b726-015125f5c0ce",
+      "sortNum": 40000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.com)"
+        }
+      ],
+      "colId": "4226891e-9e0b-4a2e-bb50-c906b54d0b8b",
+      "name": "Update task",
+      "url": "{{URL}}/api/v1/tasks/5472eb33-c83d-4b70-a996-e9ece40bca23",
+      "method": "PUT",
+      "modified": "2022-03-25T03:27:06.703Z",
+      "created": "2022-03-25T03:18:15.189Z",
+      "_id": "093515ab-78c6-44a4-9b79-cde1c116a2be",
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"status\": \"DONE\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "containerId": "11dc210d-f87e-4cb2-b726-015125f5c0ce",
+      "sortNum": 50000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.com)"
+        }
+      ],
+      "colId": "4226891e-9e0b-4a2e-bb50-c906b54d0b8b",
+      "name": "Delete task",
+      "url": "{{URL}}/api/v1/tasks/5472eb33-c83d-4b70-a996-e9ece40bca23",
+      "method": "DELETE",
+      "modified": "2022-03-25T03:27:32.623Z",
+      "created": "2022-03-25T03:19:40.641Z",
+      "_id": "75418e6e-8a06-4e82-9646-682d4b560395",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "11dc210d-f87e-4cb2-b726-015125f5c0ce",
+      "sortNum": 60000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.com)"
+        }
+      ],
+      "colId": "4226891e-9e0b-4a2e-bb50-c906b54d0b8b",
+      "name": "Get task ",
+      "url": "",
+      "method": "GET",
+      "modified": "2022-03-25T03:20:46.318Z",
+      "created": "2022-03-25T03:20:46.318Z",
+      "_id": "4589db06-73ac-42e1-968a-40e1e7093295"
+    },
+    {
+      "containerId": "11dc210d-f87e-4cb2-b726-015125f5c0ce",
+      "sortNum": 70000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.com)"
+        }
+      ],
+      "colId": "4226891e-9e0b-4a2e-bb50-c906b54d0b8b",
+      "name": "Get tasks with filter",
+      "url": "{{URL}}/api/v1/tasks?status=OPEN&search=task 1",
+      "method": "GET",
+      "modified": "2022-03-25T03:27:46.998Z",
+      "created": "2022-03-25T03:21:29.192Z",
+      "_id": "100c2949-c30b-4dac-9e1f-1415b38cf144",
+      "params": [
+        { "name": "status", "value": "OPEN", "isPath": false },
+        { "name": "search", "value": "task 1", "isPath": false }
+      ],
+      "tests": []
+    }
+  ],
+  "settings": {
+    "headers": [],
+    "tests": [],
+    "envId": "c3ca50bf-66b9-4057-919c-83cf5cc4a395"
+  }
+}
