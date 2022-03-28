@@ -8,7 +8,9 @@ import {
   Post,
   Put,
   Query,
+  UseGuards,
 } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
 import { CreateTaskDto } from './dtos/create-task.dto';
 import { FilterTasksDto } from './dtos/filter-tasks.dto';
 import { UpdateTaskDto } from './dtos/update-task.dto';
@@ -16,6 +18,7 @@ import { Task } from './task.entity';
 import { TasksService } from './tasks.service';
 
 @Controller('api/v1/tasks')
+@UseGuards(AuthGuard())
 export class TasksController {
   constructor(private tasksService: TasksService) {}
 
@@ -36,7 +39,10 @@ export class TasksController {
   }
 
   @Put('/:id')
-  updateTask(@Param('id') id: string, @Body() task: UpdateTaskDto): Promise<Task> {
+  updateTask(
+    @Param('id') id: string,
+    @Body() task: UpdateTaskDto,
+  ): Promise<Task> {
     return this.tasksService.updateTask(id, task.status);
   }
 
